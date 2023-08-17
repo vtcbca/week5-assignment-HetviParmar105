@@ -1,0 +1,54 @@
+
+C:\Users\scott>cd ../..
+
+C:\>cd sqlite3
+
+C:\sqlite3>sqlite3 student.db
+SQLite version 3.36.0 2021-06-18 18:36:39
+Enter ".help" for usage hints.
+
+sqlite> create table student_marksheet
+   ...> (
+   ...> r_no int PRIMARY KEY,
+   ...> name varchar(20),
+   ...> sub_1 int,
+   ...> sub_2 int,
+   ...> sub_3 int,
+   ...> total int
+   ...> );
+   ...> );
+
+sqlite> insert into student_marksheet values(1,'diya',90,90,90,270);
+sqlite> insert into student_marksheet values(2,'riya',90,93,80,263);
+sqlite> insert into student_marksheet values(3,'feni',85,91,79,255);
+sqlite> insert into student_marksheet values(4,'khushi',69,82,77,228);
+sqlite> insert into student_marksheet values(5,'ajay',89,86,68,243);
+sqlite> insert into student_marksheet values(6,'yash',88,90,90,268);
+sqlite> insert into student_marksheet values(7,'nidhi',90,90,89,269);
+sqlite> insert into student_marksheet values(8,'het',78,87,89,254);
+sqlite> insert into student_marksheet values(9,'bhargav',77,82,86,245);
+sqlite> insert into student_marksheet values(10,'tanvi',89,82,80,251);
+
+sqlite> select * from student_marksheet;
+1|diya|90|90|90|270
+2|riya|90|93|80|263
+3|feni|85|91|79|255
+4|khushi|69|82|77|228
+5|ajay|89|86|68|243
+6|yash|88|90|90|268
+7|nidhi|90|90|89|269
+8|het|78|87|89|254
+9|bhargav|77|82|86|245
+10|tanvi|89|82|80|251
+
+=>QUERIES:-
+
+1)UPDATE SPECIFIC RECORD VALUE.
+->  update student_marksheet set name='harsh' where name='yash';
+
+2)DELETE THE SPECIFIC RECORD.
+->  delete from student_marksheet where r_no=10;
+
+3) DISPLAY STUDENT DETAIL WHO GOT HIGHEST MARK.
+->  SELECT MAX(TOTAL) FROM STUDENT_MARKSHEET;
+    270
